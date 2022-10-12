@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Bootstrap file/bootstrap.css">
+    <link rel="stylesheet" href="../Css files/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Registration form</h2>
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">First-name</label>
+                <input type="text" class="form-control" id="fname" placeholder="Enter First-name" name="fname">
+                <h6 id="fname1"></h6>
+            </div>
+            <div class="form-group">
+                <label for="email">Last-name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Enter Last-name" name="lname">
+                <h6 id="lname1"></h6>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                <h6 id="email1"></h6>
+
+            </div>
+            <div class="form-group">
+                <label for="pwd">Phone</label>
+                <input type="number" class="form-control" id="phone" placeholder="Enter phone-number" name="phone">
+                <h6 id="phone1"></h6>
+
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                <h6 id="pwd1"></h6>
+
+            </div>
+            <div class="form-group">
+                <label for="cpwd">Conform-Password:</label>
+                <input type="password" class="form-control" id="cpwd" placeholder="conform password" name="cpswd">
+                <h6 id="cpwd1"></h6>
+            </div>
+            <div class="form-group">
+                <label for="ads">enter address</Address></label>
+                <textarea name="" id="address" cols="2" rows="2" class="form-control"
+                    placeholder="enter address"></textarea>
+                <h6 id="address1"></h6>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" placeholder="enter city" name="city">
+                <h6 id="city1"></h6>
+            </div>
+
+            <div class="form-group">
+                <label for="state">Select state</label>
+                <h6 id="state1"></h6>
+
+                <select name="state" id="state" class="form-control">
+                    <option value="">Select state</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="uttarpradesh">Uttar Pradesh</option>
+                    <option value="himachalpradesh">Himachal Pradesh</option>
+                    <option value="rajsthan">Rajsthan</option>
+                    <option value="gujrat">Gujrat</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <h6 id="gender1"></h6>
+
+                <hr>
+                <label for="" class="form-group" id="gender">Select gender</label>
+                <hr>
+                <div>
+                    <input type="radio" class="mygender" type="radio" name="gender" id="m">
+
+                    <label class="" for="gender">male</label><br>
+                    <input type="radio" class="mygender" type="radio" name="gender" id="f">
+
+                    <label class="" for="gender">female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <hr>
+                <label for="" class="form-group" id="hobby">Select hobby</label>
+                <h6 id="hobby1"></h6>
+
+                <hr>
+                <input class="myhobby" type="checkbox" value="cricket" id="hobby">
+                <label class="" for="flexCheckDefault">cricket</label><br>
+                <input class="myhobby" type="checkbox" value="Volly-bal" id="hobby">
+                <label class="" for="flexCheckDefault">Volly-bal</label><br>
+                <input class="myhobby" type="checkbox" value="Football" id="hobby">
+                <label class="" for="flexCheckDefault">Football</label><br>
+                <input class="myhobby" type="checkbox" value="Kho-Kho" id="hobby">
+                <label class="" for="flexCheckDefault">Kho-Kho</label>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary" id="formbtn">Submit</button>
+
+        </form>
+    </div>
+
+    <script src="../Jquery/registration.js"> </script>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

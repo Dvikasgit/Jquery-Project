@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>login form</h2>
+        <form method="POST">
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+                <h6 id="email1"></h6>
+
+            </div>
+            
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                <h6 id="pwd1"></h6>
+
+            </div>
+           
+           
+            <br>
+            <button type="submit" class="btn btn-primary" id="formbtn">Submit</button>
+
+        </form>
+    </div>
+   
+    <script>
+       $('#email').keyup(function(){
+    validmail()
+})
+function validmail(){
+ let umail = $('#email').val();
+ let RegExpression=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var result=RegExpression.test(umail)
+if(result){
+ $('#email1').hide().html();
+}
+else{
+ $('#email1').show().html("provide valid mail id");
+
+}
+
+}
+
+
+$('#pwd').keyup(function () {
+    var e = $('#pwd').val()
+    if (e.length = "") {
+        $('#pwd1').html('please create password')
+    }
+    else if (e.length < 4) {
+        $('#pwd1').html('please enter min 5  digit password')
+    }
+    else if (e.length > 4 && e.length <= 10) {
+        $('#pwd1').hide().html()
+    }
+    else if (e.length > 11) {
+        $('#pwd1').show().html('please create short password')
+    }
+
+});
+
+$('#formbtn').click(function(){
+    let em = $('#email').val()
+    let pas = $('#pwd').val()
+
+
+    if(em == ""){
+        alert("Please enter email to login")
+    }
+    else if(pas.length < 5){
+        alert("please enter valid password")
+    }
+    
+})
+
+    </script>
+
+</body>
+
+</html>
